@@ -1,0 +1,30 @@
+@import '../iconfont/iconfont.css';
+@import '../iconfont/element/element-icons.css';
+
+/* 字体 */
+/* 弹框和页面内的标题 */
+$fontSizeBig: 16px;
+/* tab,小标题 */
+$fontSizeMiddle: 14px;
+/* 气泡正文，侧边tab二级菜单，正文，面包屑，正文（表头加粗），输入内容，文字提示 */
+$fontSizeSmall: 12px;
+
+/* 颜色 */
+/* 主题色 */
+$mainColor: #409eff;
+/* 主要文字(标题，表头文字，面包屑) */
+$mainFontColor: #303133;
+/* 常规文字（输入内容，表格二级文字，二级文字）*/
+$normalFontColor: #606266;
+/* 次要文字（输入框占位文字）*/
+$subFontColor:#909399;
+/* 禁用文字 */
+$disabledColor: #C0C4CC;
+/* 表格线条 */
+$borderColor: #e9e9e9;
+/* 输入框，下拉框或其他线条 */
+$lineColor: #DCDFE6;
+/* 表头背景色 */
+$headerBackground: #729ABC;
+/* 斑马纹 */
+$stripeColor: #F2F2F2;
