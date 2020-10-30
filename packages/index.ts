@@ -20,7 +20,8 @@ const components: componentsData = {
   popDialog,
 };
 
-const install = (vue: typeof Vue) => {
+const install: any = (vue: typeof Vue) => {
+  if (install.installed) return;
   vue.use(DatePicker);
   vue.use(Select);
   vue.use(Option);

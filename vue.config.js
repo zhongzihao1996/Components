@@ -14,6 +14,9 @@ module.exports = {
   assetsDir: 'public',
   publicPath: './',
   productionSourceMap: false,
+  css: {
+    extract: false,
+  },
   pages: {
     index: {
       entry: path.resolve(__dirname, './examples/main.ts'),
@@ -34,6 +37,17 @@ module.exports = {
           args[0]['process.env'].COMMER_TIME = `"${moment(new Date(COMMER_TIME)).format('YYYY-MM-DD HH:mm:ss')}"`;
           return args;
         });
+    }
+    if (process.env.NODE_ENV === 'production') {
+      config.module
+        .rule('js')
+        .include.add('/packages')
+        .end()
+        .use('babel')
+        .loader('babel-loader')
+        .tap(
+          options => options
+        );
     }
     config.optimization.delete('splitChunks');
   },

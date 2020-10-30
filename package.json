@@ -2,9 +2,10 @@
   "name": "components",
   "version": "1.0.0",
   "private": true,
+  "main": "lib/components.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --dest lib packages/index.ts",
     "lint": "vue-cli-service lint",
     "dev": "npm run serve"
   },

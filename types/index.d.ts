@@ -1,4 +1,4 @@
-export * from './components-junhai'
+import * as componentsJunhai from './components';
 
-import * as componentsJunhai from './components-junhai'
-export default componentsJunhai
+export * from './components';
+export default componentsJunhai;

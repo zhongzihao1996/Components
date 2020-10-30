@@ -1,7 +1,7 @@
-import Vue from 'vue'
+import Vue from 'vue';
 
+// eslint-disable-next-line import/prefer-default-export
 export declare class PopDialog extends Vue {
-
   static install(vue: typeof Vue): void
 
   dialogType: string
