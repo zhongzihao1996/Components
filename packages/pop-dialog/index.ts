@@ -1,4 +1,7 @@
 import Vue from 'vue';
+import {
+  Dialog,
+} from 'element-ui';
 import popDialog from './src/popDialog.vue';
 
 interface VueComp {
@@ -6,6 +9,7 @@ interface VueComp {
 }
 
 (popDialog as VueComp).install = (vue: typeof Vue) => {
+  vue.use(Dialog);
   vue.component('popDialog', popDialog);
 };
 
