@@ -1,10 +1,9 @@
 import Vue from 'vue';
 import App from './App.vue';
 
-// 本地引入
-import componentsJunhai from '../packages/index';
+import components from '../packages/index';
 
-Vue.use(componentsJunhai);
+Vue.use(components);
 
 new Vue({
   mounted() {

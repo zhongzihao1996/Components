@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- <p class="demo-main-title">后台组件demo</p> -->
-    <div class="demo-content">
+    <!-- <div class="demo-content">
       <p class="demo-title">弹窗组件</p>
       <div>
         <span class="button-span" @click="popFormDialog">打开confirm形式弹窗</span>
@@ -14,7 +14,7 @@
       <pop-dialog dialogType="inform" title="弹窗标题" :height="100" clickBgCloseFlag @close="handleCloseDialog" :showFlag.sync="showInformDialogFlag" @sureClick="showInformDialogFlag = false">
         <p>自定义内容</p>
       </pop-dialog>
-    </div>
+    </div> -->
   </div>
 </template>
 

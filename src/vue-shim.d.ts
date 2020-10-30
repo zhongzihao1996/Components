@@ -4,9 +4,3 @@ declare module '*.vue' {
 
   export default Vue;
 }
-
-declare module 'mockjs';
-declare module 'normalize-wheel';
-
-// eslint-disable-next-line no-unused-vars
-declare const compVersion: string;

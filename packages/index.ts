@@ -12,8 +12,6 @@ import {
 } from 'element-ui';
 import popDialog from './pop-dialog/index';
 
-import '../src/assets/css/button.scss';
-
 interface componentsData {
   [name: string]: object;
 }
