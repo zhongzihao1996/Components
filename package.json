@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "main": "lib/components.umd.min.js",
+  "typings": "types/index.d.ts",
+  "files": [
+    "lib",
+    "packages",
+    "src",
+    "types"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --dest lib packages/index.ts",
