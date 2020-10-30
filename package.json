@@ -7,7 +7,6 @@
   "files": [
     "lib",
     "packages",
-    "src",
     "types"
   ],
   "scripts": {
