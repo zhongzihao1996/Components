@@ -1,34 +1,24 @@
 <template>
   <div class="dialog-bg" @click.self="clickBg" v-show="showFlag">
     <transition name="dialog-transition">
-      <div class="dialog-container"
-          :class="[dialogType]"
-          :style="{width: width+'px'}"
-          v-show="showFlag">
+      <div class="dialog-container" :class="[dialogType]" :style="{width: width+'px'}" v-show="showFlag">
         <div class="dialog-header">
           <p class="dialog-title">{{title}}</p>
           <div class="dialog-close-btn" v-if="showCloseFlag" @click="handleHide">
             <i class="el-icon-close"></i>
           </div>
         </div>
-        <div class="dialog-body" :class="[{'center': centerStyle, 'scorll': height}]"
-          :style="{height: height+'px'}">
+        <div class="dialog-body" :class="[{'center': centerStyle, 'scorll': height}]" :style="{height: height+'px'}">
           <slot></slot>
         </div>
-        <div class="dialog-footer" >
+        <div class="dialog-footer">
           <template v-if="dialogType==='inform'">
-            <button type="button"
-                    class="jh-button primary"
-                    @click="clickBtn('sure')">{{buttonText}}</button>
+            <button type="button" class="jh-button primary" @click="clickBtn('sure')">{{buttonText}}</button>
           </template>
           <template v-if="dialogType === 'confirm' || dialogType === 'form'">
-            <button type="button"
-                    class="jh-button cancel-button"
-                    @click="clickBtn('cancel')">{{cancelbuttonText}}</button>
-            <button type="button"
-                    :class="['jh-button', 'sure-button', sureButtonType, { 'is-disabled': sureButtonDisabled }]"
-                    :disabled="sureButtonDisabled"
-                    @click="clickBtn('sure')">{{buttonText}}</button>
+            <button type="button" class="jh-button cancel-button" @click="clickBtn('cancel')">{{cancelbuttonText}}</button>
+            <button type="button" :class="['jh-button', 'sure-button', sureButtonType, { 'is-disabled': sureButtonDisabled }]" :disabled="sureButtonDisabled"
+              @click="clickBtn('sure')">{{buttonText}}</button>
           </template>
         </div>
       </div>
@@ -39,7 +29,7 @@
 <script lang='ts'>
 import { Component, Vue, Prop } from 'vue-property-decorator';
 
-@Component({ name: 'popDialog'})
+@Component({ name: 'popDialog' })
 export default class popDialog extends Vue {
   @Prop({
     type: String,
@@ -49,17 +39,17 @@ export default class popDialog extends Vue {
   @Prop({
     type: Boolean,
     default: false
-  }) showFlag!: Boolean;
+  }) showFlag!: boolean;
 
   @Prop({
     type: Boolean,
     default: false
-  }) showCloseFlag!: Boolean;
+  }) showCloseFlag!: boolean;
 
   @Prop({
     type: Boolean,
     default: false
-  }) clickBgCloseFlag!: Boolean;
+  }) clickBgCloseFlag!: boolean;
 
   @Prop({
     type: String,
@@ -69,7 +59,7 @@ export default class popDialog extends Vue {
   @Prop({
     type: Boolean, // 父组件传递给子组件的数据类型
     default: false // 默认值， 如果传入的是 Object，则要 default: ()=>({}) 参数为函数
-  }) centerStyle!: Boolean;
+  }) centerStyle!: boolean;
 
   @Prop({
     type: String,
@@ -84,7 +74,7 @@ export default class popDialog extends Vue {
   @Prop({
     type: Boolean,
     default: false
-  }) sureButtonDisabled!: Boolean;
+  }) sureButtonDisabled!: boolean;
 
   @Prop({
     type: String,
@@ -104,7 +94,7 @@ export default class popDialog extends Vue {
   })
   beforeCloseFun!: Function;
 
-  clickBtn(type:string) {
+  clickBtn(type: string) {
     if (type === 'sure') {
       this.$emit('sureClick');
     }
@@ -135,7 +125,9 @@ export default class popDialog extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.el-icon-close:before{ content:"\e6db" }
+.el-icon-close:before {
+  content: '\e6db';
+}
 .dialog-bg {
   position: fixed;
   top: 0;
@@ -172,12 +164,12 @@ export default class popDialog extends Vue {
       position: relative;
       text-align: left;
       line-height: 1;
-      border-bottom:1px solid $lineColor;
+      // border-bottom: 1px solid $lineColor;
       padding: 16px;
       .dialog-title {
         font-size: 16px;
         font-weight: 600;
-        color: $mainFontColor;
+        // color: $mainFontColor;
       }
       .dialog-close-btn {
         position: absolute;
@@ -187,11 +179,11 @@ export default class popDialog extends Vue {
         cursor: pointer;
         font-size: 16px;
         i {
-          color: $mainFontColor;
+          // color: $mainFontColor;
         }
         &:hover {
           i {
-            color: $mainColor;
+            // color: $mainColor;
           }
         }
       }
@@ -199,27 +191,27 @@ export default class popDialog extends Vue {
     .dialog-body {
       padding: 16px;
       text-align: left;
-      color: $normalFontColor;
+      // color: $normalFontColor;
       box-sizing: border-box;
       word-break: break-all;
-      border-bottom:1px solid $lineColor;
-       &.scorll {
+      // border-bottom: 1px solid $lineColor;
+      &.scorll {
         overflow: auto;
       }
     }
     .dialog-footer {
-      padding:16px;
+      padding: 16px;
       text-align: right;
       font-size: 0;
     }
   }
 }
 .dialog-transition-enter-active {
-  animation: dialog-transition-in .3s;
+  animation: dialog-transition-in 0.3s;
 }
 
 .dialog-transition-leave-active {
-  animation: dialog-transition-out .3s;
+  animation: dialog-transition-out 0.3s;
 }
 
 @keyframes dialog-transition-in {

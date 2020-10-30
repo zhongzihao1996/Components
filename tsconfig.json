@@ -1,27 +1,25 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "ESNext",
+    "target": "esnext",
+    "module": "esnext",
     "strict": true,
     "jsx": "preserve",
     "importHelpers": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
-    "allowJs": true,
-    "outDir": "./outDir",
     "baseUrl": ".",
+    "types": [
+      "webpack-env"
+    ],
     "paths": {
       "@/*": [
         "src/*"
       ]
     },
-    "typeRoots": [
-      "./types",
-      "./node_modules/vue/types"
-    ],
     "lib": [
       "esnext",
       "dom",
@@ -30,11 +28,10 @@
     ]
   },
   "include": [
-    "src/*.ts",
-    "packages/**/src/*.vue",
-    "packages/**/src/*.tsx",
-    "demo/*.ts",
-    "demo/*.vue",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "index.d.ts"
   ],
   "exclude": [
     "node_modules"
