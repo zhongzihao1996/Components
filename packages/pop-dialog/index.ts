@@ -2,7 +2,7 @@ import Vue from 'vue';
 import {
   Dialog,
 } from 'element-ui';
-import popDialog from './src/popDialog.vue';
+import popDialog from './src/PopDialog.vue';
 
 interface VueComp {
   install?: Function;
