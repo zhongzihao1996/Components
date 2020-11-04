@@ -1,6 +1,9 @@
 {
   "name": "components",
   "version": "1.0.0",
+  "description": "后台组件",
+  "keyword": "基于element-ui的组件",
+  "author": "小豪看世界",
   "private": true,
   "main": "lib/components.umd.min.js",
   "typings": "types/index.d.ts",

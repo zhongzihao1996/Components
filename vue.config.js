@@ -22,7 +22,7 @@ module.exports = {
       entry: path.resolve(__dirname, './examples/main.ts'),
       template: path.resolve(__dirname, './public/index.html'),
       filename: 'index.html',
-      chunks: ['index']
+      chunks: ['index'],
     }
   },
   chainWebpack: config => {
