@@ -7,7 +7,7 @@ interface VueComp {
 }
 
 (PopDialog as VueComp).install = (vue: typeof Vue) => {
-  vue.component('popDialog', PopDialog);
+  vue.component('PopDialog', PopDialog);
 };
 
 export default PopDialog;

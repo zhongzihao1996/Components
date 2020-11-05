@@ -28,8 +28,8 @@ interface PickerOptions {
 
 type DateValueType = Array<string> | string | null;
 
-@Component({ name: 'datePicker' })
-export default class datePicker extends Vue {
+@Component({ name: 'DatePicker' })
+export default class DatePicker extends Vue {
   @Prop({ default: 'mini' })
   size!: string;
 

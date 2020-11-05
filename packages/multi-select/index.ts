@@ -7,7 +7,7 @@ interface VueComp {
 }
 
 (MultiSelect as VueComp).install = (vue: typeof Vue) => {
-  vue.component('multiSelect', MultiSelect);
+  vue.component('MultiSelect', MultiSelect);
 };
 
 export default MultiSelect;

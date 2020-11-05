@@ -43,7 +43,7 @@ import Clickoutside from '../../../node_modules/element-ui/src/utils/clickoutsid
 
 export default {
   directives: { Clickoutside },
-  name: 'cascader-select',
+  name: 'CascaderSelect',
   model: {
     prop: 'value',
     event: 'change',

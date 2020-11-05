@@ -2,12 +2,13 @@
   <div>
     <p class="demo-main-title">后台组件demo</p>
 
-    <date-picker-demo></date-picker-demo>
+    <date-picker-demo />
 
-    <pop-dialog-demo></pop-dialog-demo>
+    <pop-dialog-demo />
 
-    <multi-select-demo></multi-select-demo>
+    <multi-select-demo />
 
+    <cascader-select-demo v-model="test" />
   </div>
 </template>
 
@@ -16,7 +17,7 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component({})
 export default class demoExample extends Vue {
-
+  test = [];
 }
 </script>
 

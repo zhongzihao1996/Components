@@ -7,7 +7,7 @@ interface VueComp {
 }
 
 (DatePicker as VueComp).install = (vue: typeof Vue) => {
-  vue.component('datePicker', DatePicker);
+  vue.component('DatePicker', DatePicker);
 };
 
 export default DatePicker;

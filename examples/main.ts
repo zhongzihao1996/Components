@@ -7,7 +7,8 @@ import 'element-ui/lib/theme-chalk/index.css';
 import {
   DatePicker,
   MultiSelect,
-  PopDialog
+  PopDialog,
+  CascaderSelect,
 } from '../src/main';
 
 import './pages/pages.index';
@@ -17,6 +18,7 @@ Vue.use(ElementUI);
 Vue.use(DatePicker);
 Vue.use(MultiSelect);
 Vue.use(PopDialog);
+Vue.use(CascaderSelect);
 
 new Vue({
   mounted() {

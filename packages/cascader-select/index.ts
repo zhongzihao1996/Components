@@ -7,7 +7,7 @@ interface VueComp {
 }
 
 (CascaderSelect as VueComp).install = (vue: typeof Vue) => {
-  vue.component('cascaderSelect', CascaderSelect);
+  vue.component('CascaderSelect', CascaderSelect);
 };
 
 export default CascaderSelect;

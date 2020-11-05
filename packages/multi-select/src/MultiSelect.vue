@@ -103,8 +103,8 @@ interface SelectData {
   label: string;
 }
 
-@Component({ name: 'multiSelect' })
-export default class multiSelect extends Vue {
+@Component({ name: 'MultiSelect' })
+export default class MultiSelect extends Vue {
   @Prop()
   type!: string
 

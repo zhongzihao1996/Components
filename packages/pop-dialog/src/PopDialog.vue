@@ -29,8 +29,8 @@
 <script lang='ts'>
 import { Component, Vue, Prop } from 'vue-property-decorator';
 
-@Component({ name: 'popDialog' })
-export default class popDialog extends Vue {
+@Component({ name: 'PopDialog' })
+export default class PopDialog extends Vue {
   @Prop({
     type: String,
     default: 'inform'
