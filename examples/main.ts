@@ -3,14 +3,14 @@ import Vue from 'vue';
 import App from './App.vue';
 
 import {
-  datePicker,
-  multiSelect,
-  popDialog
+  DatePicker,
+  MultiSelect,
+  PopDialog
 } from '../src/main';
 
-Vue.use(datePicker);
-Vue.use(multiSelect);
-Vue.use(popDialog);
+Vue.use(DatePicker);
+Vue.use(MultiSelect);
+Vue.use(PopDialog);
 
 new Vue({
   mounted() {

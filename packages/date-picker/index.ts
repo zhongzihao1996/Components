@@ -1,15 +1,15 @@
 import Vue from 'vue';
 
-import { DatePicker } from 'element-ui';
-import datePicker from './src/DatePicker.vue';
+import { DatePicker as datePicker } from 'element-ui';
+import DatePicker from './src/DatePicker.vue';
 
 interface VueComp {
   install?: Function;
 }
 
-(datePicker as VueComp).install = (vue: typeof Vue) => {
-  vue.use(DatePicker);
-  vue.component('datePicker', datePicker);
+(DatePicker as VueComp).install = (vue: typeof Vue) => {
+  vue.use(datePicker);
+  vue.component('datePicker', DatePicker);
 };
 
-export default datePicker;
+export default DatePicker;

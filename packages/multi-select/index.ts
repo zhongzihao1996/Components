@@ -5,17 +5,17 @@ import {
   Option,
   OptionGroup
 } from 'element-ui';
-import multiSelect from './src/MultiSelect.vue';
+import MultiSelect from './src/MultiSelect.vue';
 
 interface VueComp {
   install?: Function;
 }
 
-(multiSelect as VueComp).install = (vue: typeof Vue) => {
+(MultiSelect as VueComp).install = (vue: typeof Vue) => {
   vue.use(Select);
   vue.use(Option);
   vue.use(OptionGroup);
-  vue.component('multiSelect', multiSelect);
+  vue.component('multiSelect', MultiSelect);
 };
 
-export default multiSelect;
+export default MultiSelect;

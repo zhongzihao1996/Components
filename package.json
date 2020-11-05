@@ -15,9 +15,10 @@
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --dest lib src/main.ts",
+    "build:entry": "node ./build/build-entry.js",
     "lint": "vue-cli-service lint",
-    "dev": "npm run serve"
+    "dev": "npm run build:entry && npm run serve",
+    "build": "npm run build:entry && vue-cli-service build --target lib --dest lib src/main.ts"
   },
   "dependencies": {
     "core-js": "^3.6.4",
@@ -43,10 +44,13 @@
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-vue": "^6.1.2",
+    "glob": "^7.1.6",
+    "json-templater": "^1.2.0",
     "moment": "^2.29.1",
     "sass": "^1.25.0",
     "sass-loader": "^8.0.2",
     "typescript": "~3.7.5",
+    "uppercamelcase": "^3.0.0",
     "vue-template-compiler": "^2.6.11"
   }
 }

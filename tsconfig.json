@@ -29,6 +29,7 @@
   },
   "include": [
     "packages/**/*.ts",
+    "src/**/*.ts",
     "types/**/*.ts",
   ],
   "exclude": [

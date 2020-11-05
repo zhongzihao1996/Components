@@ -2,15 +2,15 @@ import Vue from 'vue';
 import {
   Dialog,
 } from 'element-ui';
-import popDialog from './src/PopDialog.vue';
+import PopDialog from './src/PopDialog.vue';
 
 interface VueComp {
   install?: Function;
 }
 
-(popDialog as VueComp).install = (vue: typeof Vue) => {
+(PopDialog as VueComp).install = (vue: typeof Vue) => {
   vue.use(Dialog);
-  vue.component('popDialog', popDialog);
+  vue.component('popDialog', PopDialog);
 };
 
-export default popDialog;
+export default PopDialog;

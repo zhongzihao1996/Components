@@ -1,0 +1,5 @@
+{
+  "date-picker": "./packages/date-picker/index",
+  "multi-select": "./packages/multi-select/index",
+  "pop-dialog": "./packages/pop-dialog/index"
+}
