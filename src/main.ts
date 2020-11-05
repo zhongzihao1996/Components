@@ -2,8 +2,8 @@
 
 import Vue from 'vue';
 
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+// import ElementUI from 'element-ui';
+// import 'element-ui/lib/theme-chalk/index.css';
 
 import DatePicker from '../packages/date-picker/index';
 import MultiSelect from '../packages/multi-select/index';
@@ -20,7 +20,7 @@ const components: componentsData = {
 };
 
 const install = (vue: typeof Vue) => {
-  vue.use(ElementUI);
+  // vue.use(ElementUI);
 
   Object.keys(components).forEach(key => {
     vue.component(key, components[key]);
