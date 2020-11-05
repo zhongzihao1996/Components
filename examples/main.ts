@@ -10,6 +10,8 @@ import {
   PopDialog
 } from '../src/main';
 
+import './pages/pages.index';
+
 Vue.use(ElementUI);
 
 Vue.use(DatePicker);

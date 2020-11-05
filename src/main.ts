@@ -8,6 +8,7 @@ import Vue from 'vue';
 import DatePicker from '../packages/date-picker/index';
 import MultiSelect from '../packages/multi-select/index';
 import PopDialog from '../packages/pop-dialog/index';
+import CascaderSelect from '../packages/cascader-select/index';
 
 interface componentsData {
   [name: string]: object;
@@ -17,6 +18,7 @@ const components: componentsData = {
   DatePicker,
   MultiSelect,
   PopDialog,
+  CascaderSelect,
 };
 
 const install = (vue: typeof Vue) => {
@@ -39,5 +41,6 @@ export default {
 export {
   DatePicker,
   MultiSelect,
-  PopDialog
+  PopDialog,
+  CascaderSelect
 };

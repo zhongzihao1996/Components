@@ -1,5 +1,6 @@
 {
   "date-picker": "./packages/date-picker/index",
   "multi-select": "./packages/multi-select/index",
-  "pop-dialog": "./packages/pop-dialog/index"
+  "pop-dialog": "./packages/pop-dialog/index",
+  "cascader-select": "./packages/cascader-select/index"
 }
