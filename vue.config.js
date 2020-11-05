@@ -15,7 +15,7 @@ module.exports = {
   publicPath: './',
   productionSourceMap: false,
   css: {
-    extract: false,
+    // extract: false,
   },
   pages: {
     index: {

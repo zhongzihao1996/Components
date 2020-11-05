@@ -1,12 +1,14 @@
 <template>
   <div>
     <p class="demo-main-title">后台组件demo</p>
-    <div class="demo-content">
-      <p class="demo-title">日期时间选择组件</p>
+    <div class="box">
+      <h3 class="box-title">日期时间选择组件</h3>
       <date-picker :searchFormDate.sync="date" type="datetimerange" :isLimit='false' dateType="yyyy-MM-dd HH:mm:ss" @dateChange="dateChange"></date-picker>
       <p>当前选择时间: {{date}}</p>
+    </div>
 
-      <p class="demo-title">弹窗组件</p>
+    <div class="box">
+      <h3 class="box-title">弹窗组件</h3>
       <div>
         <span class="button-span" @click="popFormDialog">打开confirm形式弹窗</span>
         <span class="button-span" @click="popInformDialog">打开inform形式弹窗</span>
@@ -15,11 +17,10 @@
         :beforeCloseFun="handleBeforeCloseDialog" @sureClick="handleSure()" @cancelClick="showFormDialogFlag = false">
         <p>自定义内容</p>
       </pop-dialog>
-      <pop-dialog dialogType="inform" title="弹窗标题" :height="100" clickBgCloseFlag @close="handleCloseDialog" :showFlag.sync="showInformDialogFlag" @sureClick="showInformDialogFlag = false">
-        <p>自定义内容</p>
-      </pop-dialog>
+    </div>
 
-      <p class="demo-title">多选选择器组件</p>
+    <div class="box">
+      <h3 class="box-title">多选选择器组件</h3>
       <span class="label-span">多选普通: </span>
       <multi-select :type="'game'" :options="optionsList" :placeholder="'游戏'" :parentVal="selectValue" @update="updateSelect"></multi-select>
       <span class="label-span">多选分组: </span>
@@ -263,47 +264,21 @@ export default class demoExample extends Vue {
 </script>
 
 <style lang="scss" scoped>
+.box {
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 0 5px #cecece;
+  margin-bottom: 30px;
+  background: #fff;
+  .box-title {
+    font-size: 20px;
+  }
+}
+
 .demo-main-title {
   margin-bottom: 20px;
   text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-}
-.demo-content {
-  padding: 32px;
-  box-sizing: border-box;
-  background-color: #fff;
-  border-radius: 6px;
-  box-shadow: 0 0 5px #cecece;
-}
-.demo-title {
-  margin: 50px 0 10px;
-  font-size: 16px;
-  &:first-child {
-    margin-top: 0;
-  }
-}
-.button-span {
-  display: inline-block;
-  width: 135px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  background: #409eff;
-  color: #fff;
-  font-size: 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  & + .pop-button {
-    margin-left: 10px;
-  }
-}
-.el-select {
-  width: 160px;
-}
-.label-span {
-  margin-right: 5px;
-  display: inline-block;
-  font-size: 14px;
+  font-size: 24px;
+  font-weight: 700;
 }
 </style>

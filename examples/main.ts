@@ -1,16 +1,16 @@
+/* eslint-disable import/named */
 import Vue from 'vue';
 import App from './App.vue';
 
-// import datePicker from '../packages/date-picker/index';
-// import multiSelect from '../packages/multi-select/index';
-// import popDialog from '../packages/pop-dialog/index';
+import {
+  datePicker,
+  multiSelect,
+  popDialog
+} from '../src/main';
 
-// Vue.use(datePicker);
-// Vue.use(multiSelect);
-// Vue.use(popDialog);
-import components from '../packages/index';
-
-Vue.use(components);
+Vue.use(datePicker);
+Vue.use(multiSelect);
+Vue.use(popDialog);
 
 new Vue({
   mounted() {

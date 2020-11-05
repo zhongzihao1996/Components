@@ -1,16 +1,15 @@
-import Vue from 'vue'
+import Vue from 'vue';
 
 export interface OptionData {
-  value: string | number
-  label: string | number
+  value: string | number;
+  label: string | number;
 }
 
 export interface OptionsGroup {
-  [groupName: string]: Array<OptionData>
+  [groupName: string]: Array<OptionData>;
 }
 
 export declare class MultiSelect extends Vue {
-
   static install(vue: typeof Vue): void
 
   type: string
@@ -28,5 +27,4 @@ export declare class MultiSelect extends Vue {
   valueField: string
 
   parentVal: Array<string>
-
 }

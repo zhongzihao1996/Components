@@ -1,16 +1,15 @@
-import Vue from 'vue'
+import Vue from 'vue';
 
 export type TypeConfig = 'daterange' | 'datetimerange' | 'datetime' | 'year' | 'month' | 'week' | 'date'
 
 export interface PickerOptionsData {
-  text: string,
-  onClick?: Function
+  text: string;
+  onClick?: Function;
 }
 
 export type DateValueType = Array<string> | string | null;
 
 export declare class DatePicker extends Vue {
-
   static install(vue: typeof Vue): void
 
   size: string
@@ -38,5 +37,4 @@ export declare class DatePicker extends Vue {
   endPlaceholder: string
 
   pickerOptionsData: PickerOptionsData[]
-
 }

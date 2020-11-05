@@ -12,9 +12,9 @@ import {
 } from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
-import datePicker from './date-picker/index';
-import multiSelect from './multi-select/index';
-import popDialog from './pop-dialog/index';
+import datePicker from '../packages/date-picker/index';
+import multiSelect from '../packages/multi-select/index';
+import popDialog from '../packages/pop-dialog/index';
 
 interface componentsData {
   [name: string]: object;
@@ -34,8 +34,10 @@ const install = (vue: typeof Vue) => {
   vue.use(Dialog);
   // vue.use(Scrollbar);
   vue.use(Checkbox);
+  vue.use(CheckboxGroup);
+
   vue.prototype.$message = Message;
-  vue.use(CheckboxGroup); Object.keys(components).forEach(key => {
+  Object.keys(components).forEach(key => {
     vue.component(key, components[key]);
   });
 };
@@ -47,5 +49,10 @@ if (typeof window !== 'undefined' && window.Vue) {
 export default {
   version: '1.0.0',
   install,
-  ...components
+};
+
+export {
+  datePicker,
+  multiSelect,
+  popDialog,
 };

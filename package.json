@@ -10,11 +10,12 @@
   "files": [
     "lib",
     "packages",
+    "src",
     "types"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --dest lib packages/index.ts",
+    "build": "vue-cli-service build --target lib --dest lib src/main.ts",
     "lint": "vue-cli-service lint",
     "dev": "npm run serve"
   },
